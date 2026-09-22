@@ -1,0 +1,50 @@
+.link {
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--font-body);
+  font-size: var(--type-body-sm);
+  font-weight: 560;
+  justify-content: center;
+  line-height: 1.2;
+  min-height: 3rem;
+  padding: 0.85rem 1.35rem;
+  text-decoration: none;
+  touch-action: manipulation;
+  transition:
+    background-color var(--motion-fast) var(--ease-enter),
+    border-color var(--motion-fast) var(--ease-enter),
+    color var(--motion-fast) var(--ease-enter);
+}
+
+.brand {
+  background: var(--color-brand);
+  color: var(--color-charcoal);
+}
+
+.brand:hover {
+  background: var(--color-brand-hover);
+}
+
+.dark {
+  background: var(--color-charcoal);
+  color: var(--color-surface);
+}
+
+.dark:hover {
+  background: var(--color-ink);
+}
+
+.text {
+  border-bottom-color: var(--color-brand-deep);
+  border-radius: 0;
+  color: var(--color-charcoal);
+  min-height: 2.75rem;
+  padding-inline: 0;
+}
+
+.text:hover {
+  border-bottom-color: var(--color-charcoal);
+}

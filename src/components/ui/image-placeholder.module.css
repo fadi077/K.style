@@ -1,0 +1,96 @@
+.placeholder {
+  --placeholder-ratio: 4 / 5;
+  aspect-ratio: var(--placeholder-ratio);
+  border: var(--border-subtle);
+  color: var(--color-charcoal);
+  display: grid;
+  min-height: 12rem;
+  overflow: hidden;
+  padding: clamp(1rem, 1vw + 0.75rem, 1.75rem);
+  position: relative;
+}
+
+.placeholder::before,
+.placeholder::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+}
+
+.placeholder::before {
+  border: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+  inset: clamp(0.75rem, 2vw, 2rem);
+}
+
+.placeholder::after {
+  background: currentColor;
+  height: 1px;
+  opacity: 0.18;
+  right: clamp(0.75rem, 2vw, 2rem);
+  top: 50%;
+  transform: rotate(-22deg);
+  transform-origin: right center;
+  width: 42%;
+}
+
+.limestone {
+  background: var(--color-limestone);
+}
+
+.grout {
+  background: var(--color-grout);
+}
+
+.charcoal {
+  background: var(--color-charcoal);
+  color: var(--color-surface);
+}
+
+.surface {
+  background: var(--color-surface);
+}
+
+.marker {
+  background: var(--color-brand);
+  height: 0.45rem;
+  justify-self: end;
+  width: 0.45rem;
+}
+
+.copy {
+  align-self: end;
+  display: grid;
+  gap: var(--space-2);
+  position: relative;
+  z-index: 1;
+}
+
+.copy p,
+.copy strong,
+.copy span {
+  margin: 0;
+}
+
+.copy p,
+.copy span {
+  font-size: var(--type-caption);
+  line-height: 1.35;
+}
+
+.copy p {
+  font-weight: 620;
+  text-transform: uppercase;
+}
+
+.copy strong {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 1.1rem + 1.8vw, 3.2rem);
+  font-weight: 420;
+  letter-spacing: var(--tracking-tight);
+  line-height: 0.98;
+  max-width: 13ch;
+}
+
+.copy span {
+  max-width: 30ch;
+}

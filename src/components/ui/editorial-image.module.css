@@ -1,0 +1,28 @@
+.frame {
+  background: var(--color-limestone);
+  min-height: 12rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.hasRatio {
+  aspect-ratio: var(--editorial-ratio);
+}
+
+.image {
+  object-fit: cover;
+  object-position: var(--editorial-position);
+  transition: transform 700ms var(--ease-enter);
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .frame:hover .image {
+    transform: scale(1.012);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .image {
+    transition: none;
+  }
+}

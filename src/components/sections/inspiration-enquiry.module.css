@@ -1,0 +1,210 @@
+.section {
+  background: var(--color-charcoal);
+  color: var(--color-surface);
+  display: grid;
+  gap: clamp(4rem, 5vw, 9rem);
+  grid-template-columns: minmax(0, 0.9fr) minmax(26rem, 1fr);
+  padding: var(--section-space) max(var(--page-gutter), calc((100vw - var(--content-wide)) / 2 + var(--page-gutter)));
+}
+
+.kicker,
+.lead,
+.description,
+.status,
+.todo {
+  margin: 0;
+}
+
+.kicker {
+  color: var(--color-brand);
+  font-size: var(--type-caption);
+  font-weight: 620;
+}
+
+.introduction h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-heading);
+  font-weight: 410;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  margin: var(--space-12) 0 0;
+  max-width: 8ch;
+  text-wrap: balance;
+}
+
+.lead {
+  color: var(--color-brand);
+  font-family: var(--font-display);
+  font-size: var(--type-lead);
+  margin-top: var(--space-8);
+}
+
+.description {
+  color: color-mix(in srgb, var(--color-surface) 78%, transparent);
+  margin-top: var(--space-4);
+  max-width: 38rem;
+}
+
+.steps {
+  list-style: none;
+  margin: var(--space-16) 0 0;
+  padding: 0;
+}
+
+.steps li {
+  border-top: 1px solid color-mix(in srgb, var(--color-surface) 24%, transparent);
+  display: grid;
+  font-size: var(--type-body-sm);
+  gap: var(--space-4);
+  grid-template-columns: 2rem 1fr;
+  padding-block: var(--space-4);
+}
+
+.steps li:last-child {
+  border-bottom: 1px solid color-mix(in srgb, var(--color-surface) 24%, transparent);
+}
+
+.steps span {
+  color: var(--color-brand);
+}
+
+.form {
+  align-self: start;
+  background: var(--color-surface);
+  color: var(--color-charcoal);
+  padding: clamp(1.5rem, 2vw + 1rem, 3.5rem);
+}
+
+.status {
+  border-left: 0.35rem solid var(--color-brand);
+  font-size: var(--type-body-sm);
+  font-weight: 540;
+  padding-left: var(--space-4);
+}
+
+.status a {
+  text-underline-offset: 0.25em;
+}
+
+.form fieldset {
+  border: 0;
+  margin: var(--space-8) 0 0;
+  padding: 0;
+}
+
+.form fieldset:disabled {
+  opacity: 0.66;
+}
+
+.form legend {
+  font-family: var(--font-display);
+  font-size: var(--type-heading-sm);
+  font-weight: 420;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  margin-bottom: var(--space-8);
+  padding: 0;
+}
+
+.field,
+.uploadField {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field label,
+.uploadField label {
+  font-size: var(--type-body-sm);
+  font-weight: 620;
+}
+
+.field input,
+.field textarea,
+.field select,
+.uploadField input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--color-charcoal);
+  border-radius: 0;
+  color: var(--color-charcoal);
+  min-height: 3.25rem;
+  padding: var(--space-3) 0;
+  width: 100%;
+}
+
+.field select {
+  appearance: auto;
+}
+
+.field textarea {
+  resize: vertical;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-muted-ink);
+}
+
+.uploadField {
+  border: 1px dashed var(--color-grout);
+  padding: var(--space-6);
+}
+
+.uploadField input {
+  border: 0;
+}
+
+.uploadField span {
+  color: var(--color-muted-ink);
+  font-size: var(--type-caption);
+}
+
+.contactGrid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--space-8);
+}
+
+.field:has(textarea) {
+  margin-top: var(--space-8);
+}
+
+.uploadField {
+  margin-top: var(--space-8);
+}
+
+.form button {
+  background: var(--color-brand);
+  border: 1px solid var(--color-charcoal);
+  border-radius: var(--radius-control);
+  color: var(--color-charcoal);
+  cursor: not-allowed;
+  font-weight: 620;
+  margin-top: var(--space-8);
+  min-height: 3rem;
+  opacity: 0.62;
+  padding: 0.85rem 1.35rem;
+}
+
+.todo {
+  color: var(--color-muted-ink);
+  font-size: var(--type-caption);
+  margin-top: var(--space-4);
+}
+
+@media (max-width: 64rem) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+
+  .introduction {
+    max-width: var(--content-reading);
+  }
+}
+
+@media (max-width: 36rem) {
+  .contactGrid {
+    grid-template-columns: 1fr;
+  }
+}

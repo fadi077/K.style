@@ -1,0 +1,28 @@
+.logo,
+.logo img {
+  display: block;
+}
+
+.logo img {
+  clip-path: circle(46.4% at 50% 50%);
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+
+.header {
+  height: 4rem;
+  width: 4rem;
+}
+
+.footer {
+  height: 7.25rem;
+  width: 7.25rem;
+}
+
+@media (max-width: 48rem) {
+  .header {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}

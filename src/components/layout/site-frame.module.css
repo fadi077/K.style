@@ -1,0 +1,22 @@
+.skipLink {
+  background: var(--color-ink);
+  color: var(--color-surface);
+  font-size: var(--type-body-sm);
+  left: var(--space-4);
+  padding: 0.8rem 1rem;
+  position: fixed;
+  top: var(--space-4);
+  transform: translateY(-180%);
+  transition: transform var(--motion-fast) var(--ease-enter);
+  z-index: calc(var(--layer-modal) + 1);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skipLink {
+    transition: none;
+  }
+}

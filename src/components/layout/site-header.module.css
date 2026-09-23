@@ -48,6 +48,11 @@
   text-decoration-color: var(--color-brand-deep);
 }
 
+.desktopNav a[aria-current="page"] {
+  text-decoration-color: var(--color-brand-deep);
+  text-decoration-thickness: 2px;
+}
+
 .desktopActions {
   align-items: center;
   display: flex;
@@ -154,6 +159,11 @@
     line-height: 1;
     min-height: 4.7rem;
     text-decoration: none;
+  }
+
+  .mobilePanel nav a[aria-current="page"] {
+    border-left: 3px solid var(--color-brand);
+    padding-left: var(--space-4);
   }
 
   .mobileActions {

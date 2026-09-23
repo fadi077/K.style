@@ -24,7 +24,7 @@ export function InspirationEnquiry() {
         </ol>
       </div>
 
-      <form aria-describedby="form-status" className={styles.form}>
+      <form aria-describedby="form-status" className={styles.form} id="inspiration-form">
         <p className={styles.status} id="form-status">
           Online submissions are not connected yet. Please do not enter personal
           information. For now, call{" "}

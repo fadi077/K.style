@@ -3,11 +3,26 @@
   aspect-ratio: var(--placeholder-ratio);
   border: var(--border-subtle);
   color: var(--color-charcoal);
+  container-type: inline-size;
   display: grid;
   min-height: 12rem;
   overflow: hidden;
   padding: clamp(1rem, 1vw + 0.75rem, 1.75rem);
   position: relative;
+}
+
+@container (max-width: 18rem) {
+  .copy {
+    gap: var(--space-1);
+  }
+
+  .copy strong {
+    font-size: 1.35rem;
+  }
+
+  .copy span {
+    display: none;
+  }
 }
 
 .placeholder::before,
@@ -93,4 +108,16 @@
 
 .copy span {
   max-width: 30ch;
+}
+
+.compact .copy {
+  gap: var(--space-1);
+}
+
+.compact .copy strong {
+  display: none;
+}
+
+.compact .copy span {
+  display: none;
 }

@@ -3,6 +3,7 @@ import styles from "./image-placeholder.module.css";
 
 type ImagePlaceholderProps = {
   className?: string;
+  compact?: boolean;
   detail?: string;
   label?: string;
   ratio: string;
@@ -12,6 +13,7 @@ type ImagePlaceholderProps = {
 
 export function ImagePlaceholder({
   className,
+  compact = false,
   detail,
   label = "Photography pending",
   ratio,
@@ -23,7 +25,7 @@ export function ImagePlaceholder({
   return (
     <div
       aria-label={`${label}: ${subject}. Recommended aspect ratio ${ratio}.`}
-      className={`${styles.placeholder} ${styles[tone]} ${className ?? ""}`}
+      className={`${styles.placeholder} ${styles[tone]} ${compact ? styles.compact : ""} ${className ?? ""}`}
       role="img"
       style={style}
     >

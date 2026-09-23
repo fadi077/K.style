@@ -1,29 +1,30 @@
 import { BrandLogo } from "@/components/ui/brand-logo";
 import { business } from "@/data/business";
+import Link from "next/link";
 import styles from "./site-footer.module.css";
 
 const categoryLinks = [
-  ["Tiles", "#tiles"],
-  ["Flooring", "#flooring"],
-  ["Bathrooms", "#bathrooms"],
-  ["Beds & mattresses", "#beds"],
+  ["Tiles", "/tiles"],
+  ["Flooring", "/flooring"],
+  ["Bathrooms", "/bathrooms"],
+  ["Beds & mattresses", "/beds-mattresses"],
 ] as const;
 
 const pageLinks = [
-  ["Inspiration", "#inspiration"],
-  ["Send your inspiration", "#send-inspiration"],
-  ["Offers", "#offers"],
-  ["Visit us", "#showroom"],
+  ["Inspiration", "/inspiration"],
+  ["Send your inspiration", "/inspiration#send-inspiration"],
+  ["Offers", "/offers"],
+  ["Visit us", "/visit-us"],
 ] as const;
 
 export function SiteFooter() {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="site-footer">
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <a aria-label="K.Style home" className={styles.logoLink} href="#top">
+          <Link aria-label="K.Style home" className={styles.logoLink} href="/">
             <BrandLogo size="footer" />
-          </a>
+          </Link>
           <p>{business.name}</p>
           <address>
             {business.address.lines.map((line) => (
@@ -38,18 +39,18 @@ export function SiteFooter() {
         <nav aria-label="Product categories" className={styles.linkGroup}>
           <h2>Categories</h2>
           {categoryLinks.map(([label, href]) => (
-            <a href={href} key={label}>
+            <Link href={href} key={label}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <nav aria-label="Footer navigation" className={styles.linkGroup}>
           <h2>Explore</h2>
           {pageLinks.map(([label, href]) => (
-            <a href={href} key={label}>
+            <Link href={href} key={label}>
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -63,7 +64,7 @@ export function SiteFooter() {
               </div>
             ))}
           </dl>
-          <a className={styles.contactCta} href="#quote">Get a quote</a>
+          <Link className={styles.contactCta} href="/get-a-quote">Get a quote</Link>
         </div>
 
         <div className={styles.legal}>

@@ -497,7 +497,7 @@
 @media (max-width: 48rem) {
   .hero { display: flex; flex-direction: column; min-height: auto; padding-top: var(--space-12); }
   .heroCopy { padding-block: 0; }
-  .hero h1 { font-size: clamp(4rem, 20vw, 6.3rem); line-height: 0.86; margin-top: var(--space-8); max-width: 7ch; }
+  .hero h1 { font-size: clamp(3.35rem, 15vw, 5.5rem); line-height: 0.88; margin-top: var(--space-8); max-width: 7ch; }
   .heroIntroduction { max-width: 24rem; }
   .heroActions { align-items: flex-start; flex-direction: column; }
   .heroMedia { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(8, 3.5rem); min-height: auto; margin-top: var(--space-12); order: 2; }
@@ -548,7 +548,7 @@
   .showroomSection { display: block; }
   .showroomVisual { grid-template-columns: repeat(4, minmax(0, 1fr)); grid-template-rows: repeat(7, 3.4rem); }
   .showroomVisual > div:first-child { grid-row: 1 / 7; }
-  .showroomDetail { border-width: var(--space-1); grid-column: 3 / -1; grid-row: 5 / -1; min-height: 12rem; transform: translateX(var(--space-4)); }
+  .showroomDetail { border-width: var(--space-1); grid-column: 3 / -1; grid-row: 1 / 4; min-height: 9rem; transform: translateX(var(--space-4)); }
   .showroomCopy { margin-top: var(--space-16); padding-left: 0; }
   .showroomCopy dl > div { grid-template-columns: minmax(6rem, 0.75fr) 1.25fr; }
   .finalCta { display: block; }

@@ -44,7 +44,8 @@ const categories = [
     alt: "Warm bathroom finished with large-format stone-effect tiles",
     description:
       "Wall and floor tiles for bathrooms, kitchens, living spaces and more.",
-    hrefLabel: "Explore tiles in the showroom",
+    href: "/tiles",
+    hrefLabel: "Explore tiles",
     id: "tiles",
     image: "/images/interiors/kstyle-installed-tile-bathroom.png",
     layout: "categoryWide",
@@ -57,7 +58,8 @@ const categories = [
     alt: "Oak-toned plank flooring in a light-filled living room",
     description:
       "Flooring selected with the room, daily use and lasting feel in mind.",
-    hrefLabel: "Explore flooring in the showroom",
+    href: "/flooring",
+    hrefLabel: "Explore flooring",
     id: "flooring",
     image: "/images/interiors/kstyle-flooring-living-space.png",
     layout: "categoryTall",
@@ -70,7 +72,8 @@ const categories = [
     alt: "Charcoal tiled bathroom with timber vanity and walk-in shower",
     description:
       "Tiles and bathroom ware considered as one practical, coherent space.",
-    hrefLabel: "Explore bathrooms in the showroom",
+    href: "/bathrooms",
+    hrefLabel: "Explore bathrooms",
     id: "bathrooms",
     image: "/images/interiors/kstyle-architectural-charcoal-bathroom.png",
     layout: "categoryInset",
@@ -82,7 +85,8 @@ const categories = [
   {
     description:
       "Beds and mattresses to compare in person, with comfort at the centre.",
-    hrefLabel: "Explore beds and mattresses in the showroom",
+    href: "/beds-mattresses",
+    hrefLabel: "Explore beds and mattresses",
     id: "beds",
     layout: "categoryLow",
     ratio: "3 / 2",
@@ -148,8 +152,8 @@ export default function Home() {
               the K.Style showroom in Donegal Town.
             </p>
             <div className={styles.heroActions}>
-              <ActionLink href="#quote">Get a quote</ActionLink>
-              <ActionLink href="#showroom" variant="text">
+              <ActionLink href="/get-a-quote">Get a quote</ActionLink>
+              <ActionLink href="/visit-us" variant="text">
                 Visit the showroom
               </ActionLink>
             </div>
@@ -223,7 +227,7 @@ export default function Home() {
                   <div className={styles.categoryCopy}>
                     <h3>{category.title}</h3>
                     <p>{category.description}</p>
-                    <a href="#showroom">{category.hrefLabel}</a>
+                    <a href={category.href}>{category.hrefLabel}</a>
                   </div>
                 </div>
               </article>
@@ -243,7 +247,11 @@ export default function Home() {
           </div>
         </section>
 
-        <section aria-labelledby="featured-title" className={styles.featuredSection}>
+        <section
+          aria-labelledby="featured-title"
+          className={styles.featuredSection}
+          id="materials-edit"
+        >
           <div className={styles.featuredHeading}>
             <p className={styles.sectionLabel}>The Materials Edit</p>
             <h2 id="featured-title">A closer look at tone, texture and scale.</h2>
@@ -401,6 +409,7 @@ export default function Home() {
             />
             <ImagePlaceholder
               className={styles.showroomDetail}
+              compact
               detail="Real consultation or display photograph required"
               label="Showroom detail pending"
               ratio="4 / 5"

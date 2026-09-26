@@ -10,7 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/beds-mattresses", priority: 0.8 },
     { path: "/inspiration", priority: 0.8 },
     { path: "/offers", priority: 0.7 },
-    { path: "/visit-us", priority: 0.9 },
+    { path: "/contact-us", priority: 0.9 },
     { path: "/get-a-quote", priority: 0.9 },
   ] as const;
 

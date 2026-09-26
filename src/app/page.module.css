@@ -433,7 +433,7 @@
 }
 
 .callLink,
-.showroomActions button {
+.textLink {
   align-items: center;
   border-radius: var(--radius-control);
   display: inline-flex;
@@ -450,12 +450,10 @@
   text-decoration: none;
 }
 
-.showroomActions button {
-  background: transparent;
-  border: 1px solid var(--color-grout);
-  color: var(--color-muted-ink);
-  cursor: not-allowed;
-  opacity: 0.7;
+.textLink {
+  color: var(--color-charcoal);
+  text-decoration-color: var(--color-brand-deep);
+  text-underline-offset: 0.3em;
 }
 
 .finalCta {
@@ -559,6 +557,8 @@
 @media (prefers-reduced-motion: no-preference) {
   .heroCopy { animation: hero-copy-in var(--motion-reveal) var(--ease-enter) both; }
   .heroMedia { animation: hero-media-in 620ms var(--ease-enter) 80ms both; }
+  .heroRoom > img { animation: hero-room-image-in 900ms var(--ease-enter) 140ms both; }
+  .heroDetail > img { animation: hero-detail-image-in 760ms var(--ease-enter) 280ms both; }
 }
 
 @keyframes hero-copy-in {
@@ -567,6 +567,16 @@
 
 @keyframes hero-media-in {
   from { opacity: 0.82; transform: translateX(0.8rem); }
+}
+
+@keyframes hero-room-image-in {
+  from { opacity: 0; transform: scale(1.035); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes hero-detail-image-in {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {

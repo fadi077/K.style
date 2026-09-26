@@ -1,0 +1,188 @@
+.form {
+  background: var(--color-surface);
+  border-top: 0.25rem solid var(--color-brand);
+  color: var(--color-charcoal);
+  padding: clamp(1.5rem, 3vw, 3.5rem);
+}
+
+.formHeader h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-heading-sm);
+  font-weight: 410;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1;
+  margin: var(--space-3) 0 var(--space-4);
+  text-wrap: balance;
+}
+
+.formHeader > p:last-child {
+  color: var(--color-muted-ink);
+  margin: 0;
+  max-width: 32rem;
+}
+
+.formEyebrow {
+  color: var(--color-brand-deep);
+  font-size: var(--type-caption);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.status {
+  border-left: 0.3rem solid var(--color-brand);
+  font-size: var(--type-body-sm);
+  margin: var(--space-8) 0 0;
+  padding: var(--space-3) var(--space-4);
+}
+
+.success {
+  background: color-mix(in srgb, var(--color-brand) 12%, var(--color-surface));
+}
+
+.error {
+  background: color-mix(in srgb, var(--color-danger) 10%, var(--color-surface));
+  border-left-color: var(--color-danger);
+}
+
+.fieldGrid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: var(--space-8);
+}
+
+.field,
+.uploadField {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field label,
+.uploadField label {
+  font-size: var(--type-body-sm);
+  font-weight: 620;
+}
+
+.field label span,
+.uploadField label span {
+  color: var(--color-muted-ink);
+  font-weight: 450;
+}
+
+.field input,
+.field select,
+.field textarea {
+  background: var(--color-paper);
+  border: var(--border-subtle);
+  border-radius: var(--radius-control);
+  color: var(--color-charcoal);
+  min-height: 3.25rem;
+  padding: 0.75rem;
+  width: 100%;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--color-focus);
+  outline: none;
+}
+
+.field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.field textarea,
+.uploadField,
+.consent,
+.fieldGrid + .field {
+  margin-top: var(--space-8);
+}
+
+.uploadField {
+  border: 1px dashed var(--color-grout);
+  padding: var(--space-6);
+}
+
+.uploadField input {
+  color: var(--color-muted-ink);
+  font-size: var(--type-body-sm);
+  max-width: 100%;
+}
+
+.uploadField input::file-selector-button {
+  background: var(--color-charcoal);
+  border: 0;
+  color: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+  margin-right: var(--space-4);
+  min-height: 2.75rem;
+  padding: 0.6rem 0.9rem;
+}
+
+.uploadField > span {
+  color: var(--color-muted-ink);
+  font-size: var(--type-caption);
+}
+
+.consent {
+  align-items: flex-start;
+  display: flex;
+  font-size: var(--type-body-sm);
+  gap: var(--space-3);
+  line-height: 1.45;
+}
+
+.consent input {
+  accent-color: var(--color-brand-deep);
+  flex: 0 0 auto;
+  height: 1.25rem;
+  margin: 0.1rem 0 0;
+  width: 1.25rem;
+}
+
+.form button {
+  background: var(--color-brand);
+  border: 1px solid var(--color-charcoal);
+  border-radius: var(--radius-control);
+  color: var(--color-charcoal);
+  cursor: pointer;
+  font-weight: 650;
+  margin-top: var(--space-8);
+  min-height: 3.25rem;
+  padding: 0.85rem 1.35rem;
+}
+
+.form button:hover {
+  background: var(--color-brand-hover);
+}
+
+.form button:disabled {
+  cursor: wait;
+  opacity: 0.64;
+}
+
+.formNote {
+  color: var(--color-muted-ink);
+  font-size: var(--type-caption);
+  margin: var(--space-4) 0 0;
+}
+
+.formNote a {
+  color: var(--color-charcoal);
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 42rem) {
+  .fieldGrid {
+    display: block;
+  }
+
+  .fieldGrid .field + .field {
+    margin-top: var(--space-6);
+  }
+}

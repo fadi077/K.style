@@ -3,10 +3,30 @@ export const business = {
   shortName: "K.Style",
   descriptor: "Tiles & Interiors",
   url: "https://kstyle.ie",
+  email: {
+    display: "kstyledonegal@mail.com",
+    href: "mailto:kstyledonegal@mail.com",
+  },
   phone: {
     display: "+353 (0) 74 9724602",
     href: "tel:+353749724602",
   },
+  whatsapp: {
+    display: "+353 83 020 5898",
+    href: "https://wa.me/353830205898?text=Hello%20K.Style%2C%20I%27d%20like%20to%20ask%20about%20a%20room%20or%20product.",
+  },
+  social: [
+    {
+      icon: "facebook",
+      label: "Facebook",
+      href: "https://www.facebook.com/KStyleLTD/?locale=en_GB",
+    },
+    {
+      icon: "instagram",
+      label: "Instagram",
+      href: "https://www.instagram.com/kstyledonegal/",
+    },
+  ],
   address: {
     streetAddress: "Business Centre, Drumlonagher",
     addressLocality: "Donegal Town",
@@ -29,7 +49,7 @@ export const business = {
     { day: "Thursday", hours: "9:30 AM – 5:00 PM" },
     { day: "Friday", hours: "9:30 AM – 5:00 PM" },
     { day: "Saturday", hours: "10:30 AM – 5:00 PM" },
-    { day: "Sunday", hours: "Hours to be confirmed", unconfirmed: true },
+    { day: "Sunday", hours: "Closed" },
   ],
 } as const;
 

@@ -21,6 +21,21 @@
   }
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .frame {
+      animation: editorial-image-reveal linear both;
+      animation-range: entry 0% cover 30%;
+      animation-timeline: view();
+    }
+  }
+}
+
+@keyframes editorial-image-reveal {
+  from { opacity: 0.35; }
+  to { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .image {
     transition: none;

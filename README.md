@@ -75,7 +75,7 @@ The preview demonstrates typography, colour, composition, actions, offer treatme
 - `/beds-mattresses` — beds and mattresses category
 - `/inspiration` — room inspiration and image-enquiry interface
 - `/offers` — verified-offers architecture and current empty state
-- `/visit-us` — address, phone and confirmed opening hours
+- `/contact-us` — contact details, opening hours and project enquiry form
 - `/get-a-quote` — phone-first quote route and disabled enquiry interface
 
 The SEO approach is local-first: unique page titles, descriptions and useful copy establish K.Style in Donegal Town before offering a careful route for people planning from elsewhere in Ireland. Do not create near-duplicate town pages or claim delivery, stock, service areas or national coverage without verified business information.
@@ -85,12 +85,13 @@ Intentional photography-pending states remain for Beds & Mattresses and the K.St
 ## Launch dependencies
 
 - Connect the inspiration enquiry to secure file storage and message delivery.
+- Configure `CONTACT_FORM_ENDPOINT` over HTTPS to forward contact-form submissions and optional photos.
 - Add consent, retention, spam protection, upload limits, server validation, and clear success/error states before enabling submission.
 - Supply a verified directions URL.
 - Supply authentic Beds & Mattresses and K.Style showroom photography.
 - Supply verified offer data before publishing product names, prices, units, or availability.
-- Supply confirmed email, social, privacy, and legal details if they are to appear.
-- Supply a true transparent or source logo asset before creating a favicon; the provided PNG has a checkerboard background baked into the file.
+- Supply confirmed email, privacy, and legal details if they are to appear.
+- Replace the interim vector favicon with the official transparent/source logo when supplied; the provided PNG has a checkerboard background baked into the file.
 
 ## Development conventions
 

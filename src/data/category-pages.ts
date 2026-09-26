@@ -44,11 +44,11 @@ export const categoryPages = {
       },
     ],
     hero: {
-      alt: "Warm bathroom finished with large-format stone-effect tiles",
-      objectPosition: "center 57%",
-      ratio: "16 / 10",
+      alt: "Tile display aisle inside the K.Style showroom in Donegal Town",
+      objectPosition: "center 58%",
+      ratio: "4 / 5",
       sizes: "(max-width: 768px) calc(100vw - 2rem), 62vw",
-      src: "/images/interiors/kstyle-installed-tile-bathroom.png",
+      src: "/images/showroom/kstyle-tile-showroom-aisle.png",
     },
     intro: "Tiles are best understood as part of a room, not as an isolated sample.",
     metaDescription:
@@ -62,16 +62,16 @@ export const categoryPages = {
     ],
     secondaryImages: [
       {
-        alt: "Close view of the edge and surface of a light stone-effect tile",
+        alt: "Tile and bathroom display stands inside the K.Style showroom",
         ratio: "4 / 5",
         sizes: "(max-width: 768px) 72vw, 31vw",
-        src: "/images/products/kstyle-material-stone-detail.png",
+        src: "/images/showroom/kstyle-showroom-bathroom-displays.png",
       },
       {
-        alt: "Warm neutral tile samples arranged in natural light",
+        alt: "Large-format tile displays lining a K.Style showroom aisle",
         ratio: "4 / 5",
         sizes: "(max-width: 768px) 72vw, 31vw",
-        src: "/images/products/kstyle-featured-collections-material-edit.png",
+        src: "/images/showroom/kstyle-tile-showroom-aisle.png",
       },
     ],
     title: "Tiles for rooms you live in.",
@@ -99,11 +99,11 @@ export const categoryPages = {
       },
     ],
     hero: {
-      alt: "Oak-toned plank flooring in a light-filled living room",
-      objectPosition: "center 64%",
+      alt: "Tile displays and wood-effect flooring inside the K.Style showroom",
+      objectPosition: "center 68%",
       ratio: "4 / 5",
       sizes: "(max-width: 768px) calc(100vw - 2rem), 48vw",
-      src: "/images/interiors/kstyle-flooring-living-space.png",
+      src: "/images/showroom/kstyle-tile-showroom-aisle.png",
     },
     intro: "A floor sets the rhythm for everything that follows.",
     metaDescription:
@@ -113,7 +113,7 @@ export const categoryPages = {
     related: [
       { label: "Tiles", href: "/tiles" },
       { label: "Inspiration", href: "/inspiration" },
-      { label: "Visit the showroom", href: "/visit-us" },
+      { label: "Visit the showroom", href: "/contact-us" },
     ],
     secondaryImages: [
       {
@@ -156,11 +156,11 @@ export const categoryPages = {
       },
     ],
     hero: {
-      alt: "Charcoal tiled bathroom with timber vanity and walk-in shower",
+      alt: "Bathroom display with grey wall tiles, black shower screen and white vanity",
       objectPosition: "center 52%",
       ratio: "4 / 5",
       sizes: "(max-width: 768px) calc(100vw - 2rem), 48vw",
-      src: "/images/interiors/kstyle-architectural-charcoal-bathroom.png",
+      src: "/images/showroom/kstyle-bathroom-display.png",
     },
     intro: "A bathroom works best when every material is considered together.",
     metaDescription:
@@ -174,18 +174,18 @@ export const categoryPages = {
     ],
     secondaryImages: [
       {
-        alt: "Light neutral bathroom with textured tiles and walk-in shower",
+        alt: "Freestanding white bath in a marble-effect bathroom display",
         objectPosition: "center 50%",
         ratio: "4 / 5",
         sizes: "(max-width: 768px) 72vw, 31vw",
-        src: "/images/interiors/kstyle-inspiration-textured-bathroom.png",
+        src: "/images/showroom/kstyle-bathroom-bath.png",
       },
       {
-        alt: "Bathroom vanity with basin, stone-effect tiles and material samples",
+        alt: "Brushed bronze tap and basin detail in a bathroom display",
         objectPosition: "center 50%",
         ratio: "3 / 2",
         sizes: "(max-width: 768px) calc(100vw - 2rem), 43vw",
-        src: "/images/products/kstyle-curated-bathroom-collection.png",
+        src: "/images/showroom/kstyle-basin-detail.png",
       },
     ],
     title: "Bathrooms, considered as a whole.",
@@ -218,7 +218,7 @@ export const categoryPages = {
     metaTitle: "Beds & Mattresses in Donegal Town",
     path: "/beds-mattresses",
     related: [
-      { label: "Visit the showroom", href: "/visit-us" },
+      { label: "Visit the showroom", href: "/contact-us" },
       { label: "Interiors inspiration", href: "/inspiration" },
       { label: "Get a quote", href: "/get-a-quote" },
     ],

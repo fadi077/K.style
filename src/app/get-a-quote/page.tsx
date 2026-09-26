@@ -27,14 +27,12 @@ export default function GetAQuotePage() {
             image that captures the idea.
           </p>
           <p className={styles.heroDescription}>
-            Online quote requests are not connected yet. Call K.Style now, or
-            prepare the details below for when secure enquiry delivery is enabled.
+            For the quickest reply, message K.Style on WhatsApp. You can also email
+            the showroom or prepare the details below for a future quote request.
           </p>
           <div className={styles.actions}>
-            <ActionLink href={business.phone.href}>Call {business.phone.display}</ActionLink>
-            <ActionLink href="/inspiration#send-inspiration" variant="text">
-              Send your inspiration
-            </ActionLink>
+            <ActionLink href={business.whatsapp.href}>Message on WhatsApp</ActionLink>
+            <ActionLink href={business.email.href} variant="text">Email K.Style</ActionLink>
           </div>
         </div>
         <div className={styles.heroVisual}>
@@ -62,7 +60,7 @@ export default function GetAQuotePage() {
         <form aria-describedby="quote-status" className={styles.quoteForm}>
           <p className={styles.formStatus} id="quote-status">
             This form is not connected. Please do not enter personal information.
-            Call <a href={business.phone.href}>{business.phone.display}</a> instead.
+            Message K.Style on <a href={business.whatsapp.href}>WhatsApp</a> or email <a href={business.email.href}>{business.email.display}</a> instead.
           </p>
           <fieldset aria-disabled="true" disabled>
             <legend>Request a quote</legend>

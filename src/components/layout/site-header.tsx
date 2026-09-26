@@ -15,7 +15,7 @@ const navigation = [
   { label: "Beds & Mattresses", href: "/beds-mattresses" },
   { label: "Inspiration", href: "/inspiration" },
   { label: "Offers", href: "/offers" },
-  { label: "Visit Us", href: "/visit-us" },
+  { label: "Contact Us", href: "/contact-us" },
 ] as const;
 
 export function SiteHeader() {

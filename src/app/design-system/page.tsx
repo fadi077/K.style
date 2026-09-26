@@ -249,7 +249,7 @@ export default function DesignSystemPreview() {
           <div className={styles.actionSamples}>
             <ActionLink href="#conversion-preview">Request a quote</ActionLink>
             <ActionLink href="#composition" variant="dark">
-              Visit the showroom
+              Contact K.Style
             </ActionLink>
             <ActionLink href="#type" variant="text">
               Explore the system

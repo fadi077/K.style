@@ -48,3 +48,15 @@
 .text:hover {
   border-bottom-color: var(--color-charcoal);
 }
+
+.light {
+  border-bottom-color: var(--color-brand);
+  border-radius: 0;
+  color: var(--color-surface);
+  min-height: 2.75rem;
+  padding-inline: 0;
+}
+
+.light:hover {
+  border-bottom-color: var(--color-surface);
+}

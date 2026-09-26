@@ -1,4 +1,4 @@
-import { CategoryLanding } from "@/components/sections/category-landing";
+import { BathroomLanding } from "@/components/sections/bathroom-landing";
 import { categoryPages } from "@/data/category-pages";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -13,5 +13,5 @@ export const metadata = createPageMetadata({
 });
 
 export default function BathroomsPage() {
-  return <CategoryLanding category={category} />;
+  return <BathroomLanding />;
 }

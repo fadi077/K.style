@@ -1,4 +1,4 @@
-import { CategoryLanding } from "@/components/sections/category-landing";
+import { BedsLanding } from "@/components/sections/beds-landing";
 import { categoryPages } from "@/data/category-pages";
 import { createPageMetadata } from "@/lib/metadata";
 
@@ -11,5 +11,5 @@ export const metadata = createPageMetadata({
 });
 
 export default function BedsMattressesPage() {
-  return <CategoryLanding category={category} />;
+  return <BedsLanding />;
 }

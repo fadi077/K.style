@@ -1,0 +1,355 @@
+.hero {
+  background: var(--color-ink);
+  color: var(--color-surface);
+  padding: clamp(4rem, 7vw, 8rem) var(--page-gutter) var(--section-space);
+}
+
+.heroInner,
+.planning,
+.brief,
+.materials {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-inline: auto;
+  max-width: var(--content-wide);
+}
+
+.heroInner {
+  align-items: center;
+}
+
+.heroCopy {
+  grid-column: 1 / 6;
+  padding-bottom: var(--space-8);
+}
+
+.eyebrow,
+.sectionLabel {
+  color: var(--color-brand);
+  font-size: var(--type-caption);
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  margin: 0 0 var(--space-6);
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7vw, 8.5rem);
+  font-weight: 410;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-tight);
+  margin: 0;
+  max-width: 8ch;
+  text-wrap: balance;
+}
+
+.heroLead {
+  color: color-mix(in srgb, var(--color-surface) 82%, transparent);
+  font-family: var(--font-display);
+  font-size: var(--type-lead);
+  line-height: 1.3;
+  margin: var(--space-8) 0 0;
+  max-width: 27ch;
+}
+
+.actions,
+.ctaActions {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+}
+
+.hero :global([class*="text"]) {
+  color: var(--color-surface);
+}
+
+.heroMedia {
+  grid-column: 7 / -1;
+  position: relative;
+}
+
+.heroImage {
+  --editorial-ratio: 4 / 5;
+}
+
+.planning {
+  align-items: start;
+  padding-block: var(--section-space);
+}
+
+.planningIntro {
+  grid-column: 1 / 5;
+  position: sticky;
+  top: 7rem;
+}
+
+.planningIntro h2,
+.briefCopy h2,
+.materialsHeading h2,
+.cta h2 {
+  font-family: var(--font-display);
+  font-size: var(--type-heading);
+  font-weight: 410;
+  letter-spacing: var(--tracking-tight);
+  line-height: var(--leading-heading);
+  margin: 0;
+  text-wrap: balance;
+}
+
+.planningIntro > p:last-child,
+.briefCopy > p:not(.sectionLabel),
+.ctaCopy p {
+  color: var(--color-muted-ink);
+  margin: var(--space-8) 0 0;
+  max-width: 30rem;
+}
+
+.questionList {
+  grid-column: 6 / -1;
+}
+
+.questionList article {
+  border-top: var(--border-subtle);
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: 2.5rem 1.3fr 2fr;
+  padding-block: var(--space-6);
+}
+
+.questionList article:last-child {
+  border-bottom: var(--border-subtle);
+}
+
+.questionList span {
+  color: var(--color-brand-deep);
+  font-size: var(--type-caption);
+}
+
+.questionList h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 2rem);
+  font-weight: 410;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.questionList p {
+  color: var(--color-muted-ink);
+  margin: 0;
+}
+
+.brief {
+  align-items: center;
+  background: var(--color-paper);
+  padding-block: 0 var(--section-space);
+}
+
+.briefImage {
+  grid-column: 1 / 6;
+}
+
+.briefCopy {
+  grid-column: 7 / -1;
+  padding-block: var(--space-12);
+}
+
+.briefCopy ul {
+  border-top: var(--border-subtle);
+  list-style: none;
+  margin: var(--space-8) 0;
+  padding: 0;
+}
+
+.briefCopy li {
+  border-bottom: var(--border-subtle);
+  padding-block: var(--space-4);
+}
+
+.briefCopy li::before {
+  color: var(--color-brand-deep);
+  content: "↗";
+  display: inline-block;
+  margin-right: var(--space-3);
+}
+
+.materials {
+  display: block;
+  padding-bottom: var(--section-space);
+}
+
+.materialsHeading {
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-bottom: var(--space-12);
+}
+
+.materialsHeading .sectionLabel {
+  grid-column: 1 / 5;
+}
+
+.materialsHeading h2 {
+  grid-column: 6 / -1;
+  max-width: 15ch;
+}
+
+.materialGrid {
+  align-items: end;
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.materialMain {
+  grid-column: 2 / 7;
+}
+
+.materialNote {
+  border-top: var(--border-subtle);
+  grid-column: 8 / -1;
+  padding-top: var(--space-6);
+}
+
+.materialNote p {
+  color: var(--color-muted-ink);
+  margin: 0 0 var(--space-6);
+}
+
+.materialNote ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.materialNote li {
+  border-bottom: var(--border-subtle);
+  font-family: var(--font-display);
+  font-size: var(--type-heading-sm);
+  line-height: 1.05;
+  padding-block: var(--space-4);
+}
+
+.cta {
+  background: var(--color-charcoal);
+  color: var(--color-surface);
+  display: grid;
+  gap: var(--grid-gap);
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding: var(--section-space) max(var(--page-gutter), calc((100vw - var(--content-wide)) / 2 + var(--page-gutter)));
+}
+
+.cta > div:first-child {
+  grid-column: 1 / 7;
+}
+
+.cta .sectionLabel {
+  color: var(--color-brand);
+}
+
+.cta h2 {
+  max-width: 10ch;
+}
+
+.ctaCopy {
+  align-self: end;
+  grid-column: 8 / -1;
+}
+
+.ctaCopy p {
+  color: color-mix(in srgb, var(--color-surface) 76%, transparent);
+  margin: 0;
+}
+
+.ctaActions a:last-child {
+  color: var(--color-surface);
+  min-height: 2.75rem;
+  padding-block: 0.85rem;
+  text-underline-offset: 0.3em;
+}
+
+@media (max-width: 64rem) {
+  .heroCopy,
+  .planningIntro,
+  .briefImage,
+  .cta > div:first-child {
+    grid-column: 1 / 7;
+  }
+
+  .heroMedia,
+  .questionList,
+  .briefCopy,
+  .materialMain,
+  .materialNote,
+  .ctaCopy {
+    grid-column: 7 / -1;
+  }
+}
+
+@media (max-width: 48rem) {
+  .heroInner,
+  .planning,
+  .brief,
+  .materialsHeading,
+  .materialGrid,
+  .cta {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding-block: var(--space-12) var(--space-24);
+  }
+
+  .heroCopy,
+  .heroMedia,
+  .planningIntro,
+  .questionList,
+  .briefImage,
+  .briefCopy,
+  .materialsHeading .sectionLabel,
+  .materialsHeading h2,
+  .materialMain,
+  .materialNote,
+  .cta > div:first-child,
+  .ctaCopy {
+    grid-column: 1 / -1;
+  }
+
+  .hero h1 {
+    font-size: clamp(3.5rem, 18vw, 5.9rem);
+  }
+
+  .heroMedia {
+    margin-top: var(--space-8);
+  }
+
+  .planningIntro {
+    position: static;
+  }
+
+  .questionList,
+  .briefCopy,
+  .materialsHeading,
+  .materialNote {
+    margin-top: var(--space-8);
+  }
+
+  .questionList article {
+    grid-template-columns: 2.5rem 1fr;
+  }
+
+  .questionList p {
+    grid-column: 2;
+  }
+
+  .brief {
+    padding-bottom: var(--section-space);
+  }
+
+  .briefCopy {
+    padding-block: 0;
+  }
+}

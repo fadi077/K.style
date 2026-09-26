@@ -4,8 +4,10 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { InspirationEnquiry } from "@/components/sections/inspiration-enquiry";
 import { ActionLink } from "@/components/ui/action-link";
 import { EditorialImage } from "@/components/ui/editorial-image";
+import { FaqSection } from "@/components/sections/faq-section";
 import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { business, confirmedOpeningHours } from "@/data/business";
+import { faqItems } from "@/data/faq";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -19,10 +21,10 @@ export const metadata: Metadata = {
       "Tiles, flooring, bathrooms, beds, mattresses and interiors from K.Style in Donegal Town.",
     images: [
       {
-        alt: "Stone-tiled living interior",
-        height: 941,
-        url: "/images/interiors/kstyle-hero-stone-interior.webp",
-        width: 1672,
+        alt: "K.Style Tiles & Interiors — considered materials and interiors in Donegal Town",
+        height: 630,
+        url: "/opengraph-image",
+        width: 1200,
       },
     ],
     locale: "en_IE",
@@ -35,19 +37,19 @@ export const metadata: Metadata = {
     title: "K.Style Tiles & Interiors | Donegal Town",
     description:
       "Tiles, flooring, bathrooms, beds, mattresses and interiors from K.Style in Donegal Town.",
-    images: ["/images/interiors/kstyle-hero-stone-interior.webp"],
+    images: ["/opengraph-image"],
   },
 };
 
 const categories = [
   {
-    alt: "Warm bathroom finished with large-format stone-effect tiles",
+    alt: "Tile display aisle inside the K.Style showroom in Donegal Town",
     description:
       "Wall and floor tiles for bathrooms, kitchens, living spaces and more.",
     href: "/tiles",
     hrefLabel: "Explore tiles",
     id: "tiles",
-    image: "/images/interiors/kstyle-installed-tile-bathroom.png",
+    image: "/images/showroom/kstyle-tile-showroom-aisle.png",
     layout: "categoryWide",
     position: "center 56%",
     ratio: "16 / 10",
@@ -69,13 +71,13 @@ const categories = [
     title: "Flooring",
   },
   {
-    alt: "Charcoal tiled bathroom with timber vanity and walk-in shower",
+    alt: "Bathroom display with grey wall tiles, black shower screen and white vanity",
     description:
       "Tiles and bathroom ware considered as one practical, coherent space.",
     href: "/bathrooms",
     hrefLabel: "Explore bathrooms",
     id: "bathrooms",
-    image: "/images/interiors/kstyle-architectural-charcoal-bathroom.png",
+    image: "/images/showroom/kstyle-bathroom-display.png",
     layout: "categoryInset",
     position: "center 50%",
     ratio: "4 / 5",
@@ -126,12 +128,27 @@ const localBusinessStructuredData = {
   },
   description:
     "K.Style is a tiles and interiors showroom in Donegal Town offering tiles, flooring, bathrooms, beds and mattresses.",
+  email: business.email.display,
   image: `${business.url}/images/interiors/kstyle-hero-stone-interior.webp`,
   logo: `${business.url}/images/brand/kstyle-logo.png`,
   name: business.name,
   openingHoursSpecification: confirmedOpeningHours,
+  sameAs: business.social.map((social) => social.href),
   telephone: business.phone.display,
   url: business.url,
+};
+
+const faqStructuredData = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqItems.map((item) => ({
+    "@type": "Question",
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+    name: item.question,
+  })),
 };
 
 export default function Home() {
@@ -153,7 +170,7 @@ export default function Home() {
             </p>
             <div className={styles.heroActions}>
               <ActionLink href="/get-a-quote">Get a quote</ActionLink>
-              <ActionLink href="/visit-us" variant="text">
+              <ActionLink href="/contact-us" variant="text">
                 Visit the showroom
               </ActionLink>
             </div>
@@ -293,10 +310,6 @@ export default function Home() {
                 sizes="(max-width: 768px) calc(100vw - 2rem), 25vw"
                 src="/images/products/kstyle-curated-bathroom-collection.png"
               />
-              <div>
-                <h3>Bathrooms, considered together</h3>
-                <p>Look at surfaces and bathroom ware as one room.</p>
-              </div>
             </article>
           </div>
         </section>
@@ -400,21 +413,18 @@ export default function Home() {
           id="showroom"
         >
           <div className={styles.showroomVisual}>
-            <ImagePlaceholder
-              detail="Real K.Style premises photography is required before launch"
-              label="Showroom photography pending"
+            <EditorialImage
+              alt="Tile displays lining an aisle inside the K.Style showroom"
               ratio="16 / 10"
-              subject="K.Style showroom"
-              tone="limestone"
+              sizes="(max-width: 768px) calc(100vw - 2rem), 58vw"
+              src="/images/showroom/kstyle-tile-showroom-aisle.png"
             />
-            <ImagePlaceholder
+            <EditorialImage
+              alt="Bathroom display with a freestanding bath and marble-effect wall tiles"
               className={styles.showroomDetail}
-              compact
-              detail="Real consultation or display photograph required"
-              label="Showroom detail pending"
               ratio="4 / 5"
-              subject="K.Style showroom detail"
-              tone="surface"
+              sizes="(max-width: 768px) 42vw, 22vw"
+              src="/images/showroom/kstyle-bathroom-bath.png"
             />
           </div>
           <div className={styles.showroomCopy}>
@@ -441,13 +451,14 @@ export default function Home() {
               ))}
             </dl>
             <div className={styles.showroomActions}>
-              <a className={styles.callLink} href={business.phone.href}>Call K.Style</a>
-              <button disabled title="A verified directions URL is still required" type="button">
-                Get directions — link pending
-              </button>
+              <a className={styles.callLink} href={business.whatsapp.href}>Message on WhatsApp</a>
+              <a className={styles.textLink} href={business.phone.href}>Call K.Style</a>
+              <a className={styles.textLink} href={business.email.href}>Email K.Style</a>
             </div>
           </div>
         </section>
+
+        <FaqSection />
 
         <section aria-labelledby="quote-title" className={styles.finalCta} id="quote">
           <div>
@@ -469,6 +480,10 @@ export default function Home() {
       <SiteFooter />
       <script
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessStructuredData) }}
+        type="application/ld+json"
+      />
+      <script
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
         type="application/ld+json"
       />
     </>

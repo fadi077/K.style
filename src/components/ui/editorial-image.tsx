@@ -35,6 +35,7 @@ export function EditorialImage({
         alt={alt}
         className={styles.image}
         fill
+        loading={preload ? "eager" : "lazy"}
         preload={preload}
         sizes={sizes}
         src={src}

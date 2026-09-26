@@ -50,6 +50,62 @@
   text-underline-offset: 0.35em;
 }
 
+.contactLink {
+  color: color-mix(in srgb, var(--color-surface) 78%, transparent);
+  display: inline-flex;
+  font-size: var(--type-caption);
+  margin-top: var(--space-2);
+  min-height: 2.25rem;
+  text-underline-offset: 0.3em;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-4);
+  margin-top: var(--space-8);
+}
+
+.social h2 {
+  color: color-mix(in srgb, var(--color-surface) 68%, transparent);
+  flex-basis: 100%;
+  font-size: var(--type-caption);
+  font-weight: 540;
+  margin: 0;
+}
+
+.socialLink {
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-surface) 32%, transparent);
+  border-radius: var(--radius-control);
+  color: var(--color-surface);
+  display: inline-flex;
+  justify-content: center;
+  min-height: 2.75rem;
+  min-width: 2.75rem;
+  transition:
+    background-color var(--motion-fast) var(--ease-enter),
+    border-color var(--motion-fast) var(--ease-enter),
+    color var(--motion-fast) var(--ease-enter);
+}
+
+.socialLink svg {
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+.socialLink:hover {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-charcoal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .socialLink {
+    transition: none;
+  }
+}
+
 .linkGroup {
   display: flex;
   flex-direction: column;

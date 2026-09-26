@@ -21,10 +21,8 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
           <p className={styles.intro}>{category.intro}</p>
           <p className={styles.description}>{category.description}</p>
           <div className={styles.actions}>
-            <ActionLink href="/get-a-quote">Get a quote</ActionLink>
-            <ActionLink href="/visit-us" variant="text">
-              Visit the showroom
-            </ActionLink>
+            <ActionLink href={business.whatsapp.href}>Message on WhatsApp</ActionLink>
+            <ActionLink href={business.email.href} variant="text">Email K.Style</ActionLink>
           </div>
         </div>
 
@@ -87,7 +85,8 @@ export function CategoryLanding({ category }: CategoryLandingProps) {
               Planning from elsewhere in Ireland? Call before travelling so
               K.Style can discuss what you are looking for.
             </p>
-            <ActionLink href={business.phone.href}>Call K.Style</ActionLink>
+            <ActionLink href={business.whatsapp.href}>Message on WhatsApp</ActionLink>
+            <ActionLink href={business.email.href} variant="text">Email K.Style</ActionLink>
           </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ export default function OffersPage() {
           </p>
           <div className={styles.actions}>
             <ActionLink href={business.phone.href}>Call about current offers</ActionLink>
-            <ActionLink href="/visit-us" variant="text">Visit the showroom</ActionLink>
+          <ActionLink href="/contact-us" variant="text">Visit the showroom</ActionLink>
           </div>
         </div>
         <div className={styles.heroVisual}>

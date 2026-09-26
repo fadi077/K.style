@@ -5,7 +5,7 @@ import styles from "./action-link.module.css";
 type ActionLinkProps = {
   children: ReactNode;
   href: string;
-  variant?: "brand" | "dark" | "text";
+  variant?: "brand" | "dark" | "light" | "text";
 };
 
 export function ActionLink({
